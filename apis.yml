@@ -1,42 +1,59 @@
 aid: openapi-typescript-codegen
 name: OpenAPI TypeScript Codegen
 description: >-
-  OpenAPI TypeScript Codegen is an open source tool that generates TypeScript
-  API clients from OpenAPI specifications, producing lightweight, fully typed
-  client code with support for multiple HTTP libraries and runtime
-  environments.
+  OpenAPI TypeScript Codegen is an MIT-licensed Node.js library and CLI by Ferdi
+  Koomen that reads an OpenAPI 2.0 or 3.0 specification — JSON or YAML, from a
+  path, URL, or string — and generates a lightweight, fully typed TypeScript
+  client. It emits models, services, and core runtime files for one of five HTTP
+  clients (fetch, node-fetch, XHR, Axios, or Angular), and supports cancelable
+  promises, union types instead of enums, runtime schemas, custom request files,
+  and external $ref resolution. It is a build-time developer tool, not a hosted
+  service: there is no API to call, no key to issue, and no pricing. The
+  maintainer has publicly declared the project unmaintained and asks users to
+  migrate to @hey-api/openapi-ts, yet maintenance releases still shipped in
+  December 2025 and June 2026 and the package records roughly 2.46 million npm
+  downloads a month.
 type: Index
 accessModel:
-  pricing: freemium
-  onboarding: unknown
+  pricing: free
+  onboarding: self-service
   trial: false
-  try_now: false
-  public: false
-  label: Freemium
-  confidence: medium
+  try_now: true
+  public: true
+  label: Free / Open Source (MIT)
+  confidence: high
   source:
-  - plans
-  generated: '2026-07-22'
-  method: derived
+    - plans
+    - https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE
+  generated: '2026-08-06'
+  method: searched
+  note: >-
+    Corrected from a scaffold-derived "freemium" label. The tool is MIT-licensed
+    and free with no paid tier; GitHub Sponsors is optional and gates nothing.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openapi-typescript-codegen.png
 tags:
   - Code Generation
   - OpenAPI
+  - Swagger
   - SDKs
   - TypeScript
+  - Developer Tools
+  - CLI
+  - Open Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/openapi-typescript-codegen/refs/heads/main/apis.yml
 created: '2026-03-27'
-modified: '2026-04-28'
+modified: '2026-08-06'
 specificationVersion: '0.19'
 apis:
   - aid: openapi-typescript-codegen:openapi-typescript-codegen
     name: OpenAPI TypeScript Codegen
     description: >-
-      OpenAPI TypeScript Codegen is an open source tool that generates
-      TypeScript API clients from OpenAPI specifications, producing
-      lightweight, fully typed client code with support for multiple HTTP
-      libraries and runtime environments.
+      The openapi CLI and Node.js library. Consumes an OpenAPI 2.0 or 3.0
+      specification and writes a typed TypeScript client (models, services, and
+      core runtime) for fetch, node-fetch, XHR, Axios, or Angular. This is a
+      build-time generator that runs locally or in CI — it publishes no HTTP API
+      of its own, so it has no baseURL.
     humanURL: https://github.com/ferdikoomen/openapi-typescript-codegen
     tags:
       - Code Generation
@@ -47,13 +64,69 @@ apis:
         url: https://github.com/ferdikoomen/openapi-typescript-codegen#readme
       - type: GettingStarted
         url: https://github.com/ferdikoomen/openapi-typescript-codegen#usage
+      - type: CLI
+        url: cli/openapi-typescript-codegen-cli.yml
+      - type: Packages
+        url: packages/openapi-typescript-codegen-packages.yml
+      - type: SourceCode
+        url: https://github.com/ferdikoomen/openapi-typescript-codegen
 common:
   - type: Website
     url: https://github.com/ferdikoomen/openapi-typescript-codegen
   - type: Documentation
-    url: https://github.com/ferdikoomen/openapi-typescript-codegen#readme
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen/wiki
+  - type: GettingStarted
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Basic-usage
   - type: GitHubOrganization
     url: https://github.com/ferdikoomen
+  - type: GitHubRepository
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen
+  - type: SourceCode
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen
+  - type: Support
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen/issues
+  - type: License
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE
+  - type: ChangeLog
+    url: changelog/openapi-typescript-codegen-changelog.yml
+  - type: Deprecation
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen#important-announcement
+  - type: Lifecycle
+    url: lifecycle/openapi-typescript-codegen-lifecycle.yml
+  - type: CLI
+    url: cli/openapi-typescript-codegen-cli.yml
+  - type: Packages
+    url: packages/openapi-typescript-codegen-packages.yml
+  - type: Conformance
+    url: conformance/openapi-typescript-codegen-conformance.yml
+  - type: LLMsTxt
+    url: llms/openapi-typescript-codegen-llms.txt
+  - type: Plans
+    url: plans/openapi-typescript-codegen-plans-pricing.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-06'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    OpenAPI TypeScript Codegen is a build-time npm CLI that generates clients
+    from someone else's OpenAPI — it ships no API, no baseURL, and no domain of
+    its own, so there is no host to probe for a spec, /.well-known, MCP, or an
+    agent card; the artifacts here describe the tool (npm package, CLI flags,
+    changelog, deprecation notice) rather than a service.
+  evidence:
+    - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/llms.txt
+      status: 404
+    - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/SECURITY.md
+      status: 404
+    - url: https://registry.npmjs.org/openapi-typescript-codegen
+      status: 200
+    - url: https://api.github.com/repos/ferdikoomen/openapi-typescript-codegen
+      status: 200
+  checked: '2026-08-06'
