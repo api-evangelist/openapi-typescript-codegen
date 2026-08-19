@@ -1,0 +1,81 @@
+generated: '2026-08-06'
+method: searched
+source: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/README.md
+cli:
+  name: openapi
+  package: openapi-typescript-codegen
+  binary: bin/index.js
+  description: >-
+    Node.js CLI that reads an OpenAPI 2.0 or 3.0 specification (path, URL, or
+    string content) and writes a typed TypeScript client to an output directory.
+  install:
+    - method: npm
+      command: npm install openapi-typescript-codegen --save-dev
+    - method: npx
+      command: npx openapi-typescript-codegen --input ./spec.json --output ./generated
+    - method: docker
+      command: docker build . --tag openapi-typescript-codegen
+      note: build-your-own; no first-party image is published
+      source: https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Docker-usage
+usage: 'openapi [options]'
+options:
+  - flags: -V, --version
+    description: output the version number
+  - flags: -i, --input <value>
+    description: OpenAPI specification, can be a path, url or string content
+    required: true
+  - flags: -o, --output <value>
+    description: Output directory
+    required: true
+  - flags: -c, --client <value>
+    description: 'HTTP client to generate [fetch, xhr, node, axios, angular]'
+    default: fetch
+  - flags: --name <value>
+    description: Custom client class name
+  - flags: --useOptions
+    description: Use options instead of arguments
+  - flags: --useUnionTypes
+    description: Use union types instead of enums
+  - flags: --exportCore <value>
+    description: Write core files to disk
+    default: 'true'
+  - flags: --exportServices <value>
+    description: Write services to disk
+    default: 'true'
+  - flags: --exportModels <value>
+    description: Write models to disk
+    default: 'true'
+  - flags: --exportSchemas <value>
+    description: Write schemas to disk
+    default: 'false'
+  - flags: --indent <value>
+    description: 'Indentation options [4, 2, tab]'
+    default: '4'
+  - flags: --postfixServices
+    description: Service name postfix
+    default: Service
+  - flags: --postfixModels
+    description: Model name postfix
+  - flags: --request <value>
+    description: Path to custom request file
+  - flags: -h, --help
+    description: display help for command
+examples:
+  - command: openapi --input ./spec.json --output ./generated
+    description: generate a fetch client from a local specification
+  - command: openapi --input ./spec.json --output ./generated --client xhr
+    description: generate an XHR client instead of the default fetch client
+targets:
+  http_clients: [fetch, xhr, node-fetch, axios, angular]
+  input_specs: [OpenAPI 2.0, OpenAPI 3.0]
+  input_formats: [json, yaml]
+docs:
+  - https://github.com/ferdikoomen/openapi-typescript-codegen#usage
+  - https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Basic-usage
+x-evidence:
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/README.md
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://github.com/ferdikoomen/openapi-typescript-codegen/wiki
+    http_status: 200
+    fetched: '2026-08-06'

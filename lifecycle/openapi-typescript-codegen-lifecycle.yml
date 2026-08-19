@@ -1,0 +1,77 @@
+generated: '2026-08-06'
+method: searched
+sources:
+  - https://github.com/ferdikoomen/openapi-typescript-codegen#readme
+  - https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/CHANGELOG.md
+  - https://api.github.com/repos/ferdikoomen/openapi-typescript-codegen
+scope: >-
+  Lifecycle of the tool itself (an npm-distributed code generator). There is no
+  hosted API, so there are no deprecated operations, no runtime SLA, and no
+  status page to record.
+versioning:
+  scheme: semver
+  current: 0.31.0
+  released: '2026-06-20'
+  pre_1_0: true
+  distribution: npm
+  releases: https://github.com/ferdikoomen/openapi-typescript-codegen/releases
+deprecation:
+  status: superseded
+  policy_url: https://github.com/ferdikoomen/openapi-typescript-codegen#important-announcement
+  announced_in: README + CHANGELOG (0.29.0)
+  successor: '@hey-api/openapi-ts'
+  successor_url: https://github.com/hey-api/openapi-ts
+  migration_guide: https://heyapi.dev/openapi-ts/migrating.html#openapi-typescript-codegen
+  statement: >-
+    "Please migrate your projects to use @hey-api/openapi-ts. Due to time
+    limitations on my end, this project has been unmaintained for a while now."
+  announced_actions:
+    - action: archive open PRs and issues
+      stated_date: '2024-05-01'
+      observed: false
+      observation: >-
+        The repository still reports 210 open issues and is not archived as of
+        2026-08-05 (GitHub API archived=false, open_issues_count=210).
+    - action: deprecate all versions on npm
+      observed: false
+      observation: >-
+        No version in the npm registry carries a `deprecated` field as of
+        2026-08-06, so npm emits no deprecation warning on install.
+  sunset_header: null
+  note: >-
+    The project is publicly declared unmaintained and points users at a
+    successor, yet it kept shipping maintenance releases after the announcement
+    (0.30.0 in 2025-12, 0.31.0 in 2026-06) and still records ~2.46M npm
+    downloads per month. Treat the deprecation as an intent-to-hand-off rather
+    than an executed end-of-life.
+sla: null
+status_page: null
+support:
+  channel: github-issues
+  url: https://github.com/ferdikoomen/openapi-typescript-codegen/issues
+  open_issues: 210
+  as_of: '2026-08-05'
+security_policy:
+  published: false
+  probed: https://github.com/ferdikoomen/openapi-typescript-codegen/security/policy
+  observation: >-
+    GitHub renders "No security policy" — the repository ships no SECURITY.md
+    and there is no /.well-known/security.txt because the project has no domain
+    of its own.
+activity:
+  stars: 3371
+  forks: 546
+  last_push: '2026-08-05'
+  license: MIT
+  default_branch: main
+deprecated_operations: []
+x-evidence:
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/README.md
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://api.github.com/repos/ferdikoomen/openapi-typescript-codegen
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/SECURITY.md
+    http_status: 404
+    fetched: '2026-08-06'

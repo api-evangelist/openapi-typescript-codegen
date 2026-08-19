@@ -1,0 +1,107 @@
+generated: '2026-08-06'
+method: searched
+sources:
+  - https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/CHANGELOG.md
+  - https://github.com/ferdikoomen/openapi-typescript-codegen/releases
+scheme: semver
+format: keep-a-changelog
+current_version: 0.31.0
+current_version_date: '2026-06-20'
+gap: >-
+  CHANGELOG.md has not been updated since 0.29.0 (2024-04-05); the 0.30.0 and
+  0.31.0 releases exist only as GitHub release notes, so the two sources
+  disagree about what the latest documented version is.
+entries:
+  - version: 0.31.0
+    date: '2026-06-20'
+    source: release-notes
+    breaking: false
+    highlights:
+      - Maintenance release — dependency upgrades including several major-version bumps
+      - TypeScript 6 compatibility
+      - Build script fix
+      - No changes to generator output or public API
+  - version: 0.30.0
+    date: '2025-12-22'
+    source: release-notes
+    breaking: false
+    highlights:
+      - Upgraded dependencies
+      - Repeats the migration notice pointing at '@hey-api/openapi-ts'
+  - version: 0.29.0
+    date: '2024-04-05'
+    source: changelog
+    breaking: false
+    highlights:
+      - Upgraded dependencies
+      - Carries the migration notice pointing at '@hey-api/openapi-ts'
+  - version: 0.28.0
+    date: '2024-03-19'
+    source: changelog
+    breaking: false
+    fixed:
+      - Upgraded dependencies
+      - Windows issue when resolving external spec files
+      - Media-type for falsy bodies except 'undefined'
+      - Updated typo in generated header
+    added:
+      - Enabled withXSRFToken for Axios
+  - version: 0.27.0
+    date: '2024-01-15'
+    source: changelog
+    breaking: false
+    fixed:
+      - Reverted '@apidevtools/json-schema-ref-parser' to version 10.1.0
+  - version: 0.26.0
+    date: '2024-01-07'
+    source: changelog
+    breaking: false
+    fixed:
+      - Upgraded dependencies
+  - version: 0.25.0
+    date: '2023-07-05'
+    source: changelog
+    breaking: false
+    fixed:
+      - Upgraded dependencies
+    added:
+      - Allow usage of a custom axios instance
+      - Added message in generated files
+  - version: 0.24.0
+    date: '2023-04-10'
+    source: changelog
+    breaking: false
+    fixed:
+      - Upgraded dependencies
+      - Fixed issue with Cancelable promise
+      - Fixed issue with escaping reserved keywords in schema names
+    added:
+      - Added --postfixModels option
+  - version: 0.23.0
+    date: '2022-06-02'
+    source: changelog
+    breaking: false
+    fixed:
+      - Upgraded dependencies
+      - Added blank line at the end of generated files
+      - Added support for Node.js v12
+    added:
+      - Added request property inside ApiError
+      - Added support for deprecation markers inside models and operations
+  - version: 0.22.0
+    date: '2022-04-26'
+    source: changelog
+    breaking: true
+    fixed:
+      - Upgraded dependencies
+      - Fixed null value inside comments for OpenAPI v2 enums
+      - Fixed compatibility with Axios 0.27.x
+    removed:
+      - Removed deprecated enum model generation
+x-evidence:
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/CHANGELOG.md
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://api.github.com/repos/ferdikoomen/openapi-typescript-codegen/releases
+    http_status: 200
+    fetched: '2026-08-06'

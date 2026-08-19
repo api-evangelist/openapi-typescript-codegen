@@ -9,123 +9,63 @@ alignedWith:
 provider: OpenAPI TypeScript Codegen
 providerId: openapi-typescript-codegen
 publisherName: OpenAPI TypeScript Codegen
-serviceCategory: API
+serviceCategory: Developer Tools
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-08-06'
+generated: '2026-08-06'
+method: derived
+source: apis.yml
 tags:
   - Code Generation
   - OpenAPI
-  - SDKs
+  - Open Source
   - TypeScript
   - FinOps
-  - Cost Management
-  - FOCUS
-description: FinOps framework definition for the OpenAPI TypeScript Codegen API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+description: >-
+  There is no consumption cost to manage for OpenAPI TypeScript Codegen. It is a
+  free, MIT-licensed npm package that runs on the consumer's own machine or CI
+  runner; the provider issues no invoice, meters nothing, and returns no billing
+  data. Cost to an adopting organization is its own build/CI compute plus the
+  maintenance risk of depending on a package its author has declared
+  unmaintained.
+applicable: false
+reason: no-billable-service
+x-correction:
+  date: '2026-08-06'
+  note: >-
+    This file previously carried a scaffold FOCUS mapping — usage-based monthly
+    USD billing, api_requests / data_egress / compute_seconds meters, and
+    cost-per-1K-request unit economics. The provider bills nothing and publishes
+    no cost data. The scaffold billing model and meters were removed as
+    fabricated.
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
-  billingCurrency: USD
-  chargeCategories:
-    - Usage
-    - Purchase
-    - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
-focusColumns:
-  ServiceName: OpenAPI TypeScript Codegen
-  ServiceCategory: Developer Tools / API
-  ProviderName: OpenAPI TypeScript Codegen
-  PublisherName: OpenAPI TypeScript Codegen
-  InvoiceIssuerName: OpenAPI TypeScript Codegen
-  PricingCategory: Usage-Based
-  PricingUnit: request
-  BillingCurrency: USD
-  ChargeCategory: Usage
-meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: OpenAPI TypeScript Codegen
-    baseURL: ''
-    tags:
-      - Code Generation
-      - SDKs
-      - TypeScript
-    serviceName: OpenAPI TypeScript Codegen
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+  pricingCategory: Free
+  billingFrequency: none
+  billingCurrency: null
+  chargeCategories: []
+  chargeFrequency: none
+meters: []
+unitEconomics: []
+considerations:
+  - name: Build-time cost only
+    description: >-
+      Cost lands on the consumer's CI/build minutes, not on a provider invoice.
+      Generation is a local process invoked at build time.
+  - name: Supply-chain / maintenance risk
+    description: >-
+      The maintainer has publicly declared the project unmaintained and
+      recommends migrating to '@hey-api/openapi-ts'. The real financial exposure
+      is migration effort, not spend.
+    source: https://github.com/ferdikoomen/openapi-typescript-codegen#important-announcement
+  - name: Voluntary funding
+    description: >-
+      GitHub Sponsors is the only money path, and it is optional.
+    source: https://github.com/sponsors/ferdikoomen
+apis: []
+x-evidence:
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/LICENSE
+    http_status: 200
+    fetched: '2026-08-06'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

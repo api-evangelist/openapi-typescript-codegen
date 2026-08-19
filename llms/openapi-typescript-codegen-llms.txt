@@ -1,0 +1,53 @@
+# OpenAPI TypeScript Codegen
+
+> OpenAPI TypeScript Codegen is an MIT-licensed Node.js library and CLI by Ferdi Koomen that reads an OpenAPI 2.0 or 3.0 specification (JSON or YAML, from a path, URL, or string) and generates a lightweight, fully typed TypeScript client. It emits models, services, and core runtime files for one of five HTTP clients — fetch, node-fetch, XHR, Axios, or Angular — and supports cancelable promises, union types instead of enums, runtime schemas, and external `$ref` resolution. The maintainer has publicly declared the project unmaintained and asks users to migrate to `@hey-api/openapi-ts`, a fork that continues the work; despite that, maintenance releases shipped in December 2025 (0.30.0) and June 2026 (0.31.0), and the package still records roughly 2.46 million npm downloads a month. There is no hosted API, no developer portal, and no service to sign up for — this is a build-time tool distributed on npm.
+
+## Install
+
+- [npm — openapi-typescript-codegen](https://www.npmjs.com/package/openapi-typescript-codegen): `npm install openapi-typescript-codegen --save-dev`. Installs the `openapi` binary.
+
+## CLI
+
+- [Usage](https://github.com/ferdikoomen/openapi-typescript-codegen#usage): `openapi --input ./spec.json --output ./generated`. Required flags are `-i/--input` and `-o/--output`; `-c/--client` selects `fetch` (default), `xhr`, `node`, `axios`, or `angular`.
+- [Command surface (artifact)](cli/openapi-typescript-codegen-cli.yml): every documented flag, default, and example, captured from the README.
+
+## Docs
+
+- [README](https://github.com/ferdikoomen/openapi-typescript-codegen#readme): announcement, feature list, install, and CLI usage.
+- [Wiki (main documentation)](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki): the project's real documentation set.
+- [Basic usage](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Basic-usage): first generation run.
+- [OpenAPI object](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/OpenAPI-object): the generated client's runtime configuration object (base URL, token, headers).
+- [Authorization](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Authorization): supplying bearer tokens to a generated client.
+- [Client instances](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Client-instances): generating an instantiable client class instead of static services.
+- [Canceling requests](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Canceling-requests): the cancelable promise pattern.
+- [Enums vs. Union types](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Enums-vs.-Union-types) and [Arguments vs. Object style](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Arguments-vs.-Object-style): the two main output-shape decisions.
+- [Runtime schemas](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Runtime-schemas): `--exportSchemas` output.
+- [External references](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/External-references): resolving `$ref` across files and URLs.
+- [Docker usage](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Docker-usage): build-your-own image; none is published.
+- [Angular](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Angular-Support), [Axios](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Axios-Support), [Node-Fetch](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Node%E2%80%90Fetch-Support), [Babel](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Babel-Support): per-target notes.
+
+## Source
+
+- [GitHub — ferdikoomen/openapi-typescript-codegen](https://github.com/ferdikoomen/openapi-typescript-codegen): MIT, 3,371 stars, 546 forks.
+- [Issues](https://github.com/ferdikoomen/openapi-typescript-codegen/issues): the only support channel.
+- [Releases](https://github.com/ferdikoomen/openapi-typescript-codegen/releases): tagged releases, current 0.31.0 (2026-06-20).
+- [CHANGELOG.md](https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/CHANGELOG.md): Keep-a-Changelog history, last updated at 0.29.0.
+- [CONTRIBUTING.md](https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/CODE_OF_CONDUCT.md).
+- [LICENSE (MIT)](https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE).
+- [GitHub Sponsors — ferdikoomen](https://github.com/sponsors/ferdikoomen): the project's funding channel.
+
+## Status and migration
+
+- The maintainer's [announcement](https://github.com/ferdikoomen/openapi-typescript-codegen#important-announcement) asks users to migrate to [@hey-api/openapi-ts](https://github.com/hey-api/openapi-ts).
+- [Migration guide](https://heyapi.dev/openapi-ts/migrating.html#openapi-typescript-codegen): moving from `openapi-typescript-codegen` to `@hey-api/openapi-ts`.
+- The announced follow-through was not executed: the repository is not archived (210 open issues as of 2026-08-05) and no npm version carries a `deprecated` flag as of 2026-08-06.
+
+## Not published
+
+- No hosted API, no `baseURL`, no OpenAPI describing a service of its own.
+- No developer portal, pricing page, sign-up, terms of service, or privacy policy — the tool is free and MIT-licensed.
+- No `llms.txt`, `SECURITY.md`, security policy, status page, MCP server, or A2A agent card.
+
+## API Evangelist artifacts
+
+- [packages](packages/openapi-typescript-codegen-packages.yml) · [cli](cli/openapi-typescript-codegen-cli.yml) · [changelog](changelog/openapi-typescript-codegen-changelog.yml) · [lifecycle](lifecycle/openapi-typescript-codegen-lifecycle.yml) · [conformance](conformance/openapi-typescript-codegen-conformance.yml)

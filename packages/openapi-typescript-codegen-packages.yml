@@ -1,0 +1,68 @@
+generated: '2026-08-06'
+method: searched
+source: https://registry.npmjs.org/openapi-typescript-codegen
+note: >-
+  This project is a build-time developer tool, not a hosted API. The package below
+  is the tool itself (a code generator that emits TypeScript clients from an
+  OpenAPI specification) — it is not a client SDK for a provider API, so no
+  `SDKs` pointer is emitted in apis.yml.
+packages:
+  - language: typescript
+    registry: npm
+    name: openapi-typescript-codegen
+    url: https://www.npmjs.com/package/openapi-typescript-codegen
+    install: npm install openapi-typescript-codegen --save-dev
+    official: true
+    license: MIT
+    latest_version: 0.31.0
+    first_published: '2019-11-24'
+    last_published: '2026-06-20'
+    versions_published: 109
+    bin:
+      openapi: bin/index.js
+    runtime_dependencies:
+      - '@apidevtools/json-schema-ref-parser'
+      - camelcase
+      - commander
+      - fs-extra
+      - handlebars
+    keywords:
+      - openapi
+      - swagger
+      - generator
+      - typescript
+      - yaml
+      - json
+      - fetch
+      - xhr
+      - axios
+      - angular
+      - node
+    repository: https://github.com/ferdikoomen/openapi-typescript-codegen
+    issues: https://github.com/ferdikoomen/openapi-typescript-codegen/issues
+    downloads:
+      last_week: 578218
+      last_month: 2458089
+      as_of: '2026-08-05'
+      source: https://api.npmjs.org/downloads/point/last-month/openapi-typescript-codegen
+    npm_deprecated: false
+    npm_deprecated_note: >-
+      The project README announced that "all versions of this package will be
+      deprecated in NPM". As of the 2026-08-06 registry read no version carries a
+      `deprecated` field, so the npm deprecation flag was never actually applied —
+      installers get no warning from npm itself.
+distributions_not_published:
+  - registry: docker
+    status: not-published
+    note: >-
+      The repository ships a Dockerfile and a "Docker usage" wiki page, but the
+      documented flow is `docker build . --tag openapi-typescript-codegen` —
+      no first-party image is published to a registry.
+    source: https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Docker-usage
+x-evidence:
+  - url: https://registry.npmjs.org/openapi-typescript-codegen
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://api.npmjs.org/downloads/point/last-month/openapi-typescript-codegen
+    http_status: 200
+    fetched: '2026-08-06'

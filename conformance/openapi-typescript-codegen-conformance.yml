@@ -1,0 +1,78 @@
+generated: '2026-08-06'
+method: searched
+sources:
+  - https://github.com/ferdikoomen/openapi-typescript-codegen#readme
+  - https://github.com/ferdikoomen/openapi-typescript-codegen/wiki
+scope: >-
+  This project publishes no API of its own, so the standards below record what
+  the TOOL consumes and emits, not what an API surface conforms to. No
+  compliance program, certification, or audit report is published, so no
+  `Compliance` pointer is emitted in apis.yml.
+standards:
+  - id: openapi-2.0
+    role: consumer
+    conforms: true
+    evidence: >-
+      README states "Supports OpenAPI specification v2.0 and v3.0"; the
+      generator ships distinct v2/v3 parsers (src/openApi/v2, src/openApi/v3).
+  - id: openapi-3.0
+    role: consumer
+    conforms: true
+    evidence: >-
+      README states "Supports OpenAPI specification v2.0 and v3.0".
+  - id: openapi-3.1
+    role: consumer
+    conforms: false
+    evidence: >-
+      Neither the README nor the wiki claims 3.1 support; only v2.0 and v3.0 are
+      advertised.
+  - id: json-schema
+    role: consumer
+    conforms: true
+    evidence: >-
+      Resolves schemas and external references via
+      '@apidevtools/json-schema-ref-parser'; `--exportSchemas` emits runtime
+      schema objects.
+  - id: json-reference
+    role: consumer
+    conforms: true
+    evidence: >-
+      README lists "Supports external references using json-schema-ref-parser".
+  - id: asyncapi
+    role: consumer
+    conforms: false
+    evidence: No event/streaming specification support is documented.
+  - id: graphql
+    role: consumer
+    conforms: false
+    evidence: Not supported; the tool is OpenAPI/Swagger only.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Generated clients raise a generic `ApiError` carrying the response body;
+      no problem+json modelling is documented.
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      The tool has no API and issues no tokens. Generated clients accept a
+      bearer token via the OpenAPI.TOKEN configuration hook (wiki
+      "Authorization"), but the tool implements no OAuth flow itself.
+generated_client_targets:
+  - fetch
+  - xhr
+  - node-fetch
+  - axios
+  - angular
+compliance_program:
+  published: false
+  certifications: []
+  note: >-
+    Single-maintainer MIT open-source project. No SOC 2 / ISO 27001 / trust
+    center exists, and none is claimed.
+x-evidence:
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/README.md
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://github.com/ferdikoomen/openapi-typescript-codegen/wiki
+    http_status: 200
+    fetched: '2026-08-06'
