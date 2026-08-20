@@ -35,6 +35,15 @@ tags:
   - Code Generation
   - OpenAPI
   - Swagger
+  - SDK
+  - TypeScript
+  - Developer Tools
+  - CLI
+  - Open-Source
+tags_raw:
+  - Code Generation
+  - OpenAPI
+  - Swagger
   - SDKs
   - TypeScript
   - Developer Tools
@@ -56,6 +65,10 @@ apis:
       of its own, so it has no baseURL.
     humanURL: https://github.com/ferdikoomen/openapi-typescript-codegen
     tags:
+      - Code Generation
+      - SDK
+      - TypeScript
+    tags_raw:
       - Code Generation
       - SDKs
       - TypeScript
