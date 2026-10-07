@@ -102,6 +102,8 @@ apis:
       - type: SourceCode
         url: https://github.com/ferdikoomen/openapi-typescript-codegen
 common:
+  - type: Pricing
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE
   - type: Releases
     url: https://github.com/ferdikoomen/openapi-typescript-codegen/releases
   - type: CodeOfConduct
