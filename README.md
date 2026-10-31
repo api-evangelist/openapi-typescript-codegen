@@ -1,4 +1,4 @@
-# OpenAPI TypeScript Codegen (openapi-typescript-codegen)
+# OpenAPI TypeScript Codegen
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,39 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-OpenAPI TypeScript Codegen is an open source tool that generates TypeScript API clients from OpenAPI specifications, producing lightweight, fully typed client code with support for multiple HTTP libraries and runtime environments.
+OpenAPI TypeScript Codegen is an MIT-licensed Node.js library and CLI by Ferdi Koomen that reads an OpenAPI 2.0 or 3.0 specification — JSON or YAML, from a path, URL, or string — and generates a lightweight, fully typed TypeScript client. It emits models, services, and core runtime files for one of five HTTP clients (fetch, node-fetch, XHR, Axios, or Angular), and supports cancelable promises, union types instead of enums, runtime schemas, custom request files, and external $ref resolution. It is a build-time developer tool, not a hosted service: there is no API to call, no key to issue, and no pricing. The maintainer has publicly declared the project unmaintained and asks users to migrate to @hey-api/openapi-ts, yet maintenance releases still shipped in December 2025 and June 2026 and the package records roughly 2.46 million npm downloads a month.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/openapi-typescript-codegen/refs/heads/main/apis.yml)
+**Areas:** Code Generation · OpenAPI · Swagger · SDK · TypeScript · Developer Tools · CLI · Open Source
 
-## Scope
-- **Type:** Index
+## OpenAPI TypeScript Codegen on APIs.io
 
-## Tags:
- - Code Generation, OpenAPI, SDKs, TypeScript
+Everything profiled for OpenAPI TypeScript Codegen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/openapi-typescript-codegen/](https://apis.io/providers/openapi-typescript-codegen/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
-- **Created:** 2026-03-27
-- **Modified:** 2026-04-28
+### APIs (1)
 
-## APIs
+- [OpenAPI TypeScript Codegen](https://apis.io/apis/openapi-typescript-codegen/openapi-typescript-codegen/) — The openapi CLI and Node.js library. Consumes an OpenAPI 2.0 or 3.0 specification and writes a typed TypeScript client (models, services, and core runtime)…
 
-### OpenAPI TypeScript Codegen
-OpenAPI TypeScript Codegen is an open source tool that generates TypeScript API clients from OpenAPI specifications, producing lightweight, fully typed client code with support for multiple HTTP libraries and runtime environments.
+### Published properties
 
-**Human URL:** [https://github.com/ferdikoomen/openapi-typescript-codegen](https://github.com/ferdikoomen/openapi-typescript-codegen)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-#### Tags:
- - Code Generation, SDKs, TypeScript
+#### Plans and pricing (1)
 
-#### Properties
-- [Documentation](https://github.com/ferdikoomen/openapi-typescript-codegen#readme)
-- [Getting Started](https://github.com/ferdikoomen/openapi-typescript-codegen#usage)
+Published plans, tiers and prices.
 
-## Common Properties
+- [Openapi Typescript Codegen Plans Pricing](https://apis.io/plans/openapi-typescript-codegen/openapi-typescript-codegen-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Openapi Typescript Codegen Rate Limits](https://apis.io/rate-limits/openapi-typescript-codegen/openapi-typescript-codegen-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Openapi Typescript Codegen Finops](https://apis.io/finops/openapi-typescript-codegen/openapi-typescript-codegen-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://github.com/ferdikoomen/openapi-typescript-codegen)
-- [Documentation](https://github.com/ferdikoomen/openapi-typescript-codegen#readme)
-- [GitHub Organization](https://github.com/ferdikoomen)
+- [Documentation](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki)
+- [Getting started](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki/Basic-usage)
+- [Pricing](https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE)
+- [Support](https://github.com/ferdikoomen/openapi-typescript-codegen/issues)
+- [GitHub](https://github.com/ferdikoomen)
 
-## Maintainers
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+## API Evangelist rating
+
+**Kin Score 27.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 31.6 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/openapi-typescript-codegen/](https://apis.io/providers/openapi-typescript-codegen/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpenAPI TypeScript Codegen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/openapi-typescript-codegen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
