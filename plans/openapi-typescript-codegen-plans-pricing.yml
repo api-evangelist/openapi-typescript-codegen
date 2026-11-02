@@ -1,0 +1,96 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: OpenAPI TypeScript Codegen
+providerId: openapi-typescript-codegen
+created: '2026-05-04'
+modified: '2026-08-06'
+generated: '2026-08-06'
+method: searched
+source: https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE
+tags:
+  - Code Generation
+  - OpenAPI
+  - Open Source
+  - TypeScript
+description: >-
+  OpenAPI TypeScript Codegen is a build-time developer tool distributed on npm
+  under the MIT license. It is not a hosted service: there is no metered API, no
+  paid tier, no quota, and no pricing page. The single "plan" below records the
+  actual commercial model — free and unrestricted use under MIT, with optional
+  voluntary funding through GitHub Sponsors.
+x-correction:
+  date: '2026-08-06'
+  note: >-
+    This file previously carried scaffold defaults — Free / Professional /
+    Enterprise tiers with monthly request quotas, overage pricing and SLA
+    targets. None of that exists. The provider publishes no pricing of any kind.
+    The scaffold tiers were removed as fabricated.
+plans:
+  - id: openapi-typescript-codegen-oss
+    name: Open Source (MIT)
+    type: free
+    description: >-
+      Unrestricted use, copying, modification, and redistribution of the tool
+      under the MIT license. No account, no key, no quota, no charge.
+    url: https://github.com/ferdikoomen/openapi-typescript-codegen/blob/main/LICENSE
+    entries:
+      - label: License
+        description: MIT license, no usage restrictions and no fee
+        name: license
+        type: license
+        metric: license
+        limit: -1
+        timeFrame: perpetual
+        geo: global
+        domains: []
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: npm package (openapi-typescript-codegen)
+      - name: openapi CLI
+      - name: Public wiki documentation
+      - name: GitHub issues (community support, best effort)
+funding:
+  - type: sponsorship
+    name: GitHub Sponsors — ferdikoomen
+    url: https://github.com/sponsors/ferdikoomen
+    required: false
+    note: >-
+      Voluntary. The README asks companies using the tool to consider
+      sponsoring; nothing is gated behind it.
+not_applicable:
+  items:
+    - metered-api-pricing
+    - free-trial
+    - enterprise-agreement
+    - overage-billing
+  reason: >-
+    The project exposes no hosted API surface to meter or bill.
+x-evidence:
+  - url: https://raw.githubusercontent.com/ferdikoomen/openapi-typescript-codegen/main/LICENSE
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://github.com/sponsors/ferdikoomen
+    http_status: 200
+    fetched: '2026-08-06'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - seat
+  units:
+  - seat
+  plans:
+  - name: Open Source (MIT)
+    access: free
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - one-time
